@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<meta charset="lang=en">
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>PHEP TINH CO BAN</h1>
+        <div class="form-group">
+            <label>Nhap so thu 1:</label>
+            <input type="text" id="so1">
+
+
+        </div>
+        <div class="form-group">
+            <label>Nhap so thu 2:</label>
+            <input type="text" id="so2">
+        </div>
+        <div class="button">
+            <button onclick="tinhtoan('cong')">Cong</button>
+            <button onclick="tinhtoan('tru')">Tru</button>
+            <button onclick="tinhtoan('chia')">Chia</button>
+            <button onclick="tinhtoan('chia du')"> Chia du</button>
+            <div class="form-group">
+                <label>Ket qua:</label>
+                <input type="text" id="ketqua">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function tinhtoan(Pheptinh) {
+        let so1 = Number(document.getElementById('so1').value);
+        let so2 = Number(document.getElementById('so2').value);
+        let kq = 0;
+        if (Pheptinh === 'cong') kq = so1 + so2;
+        if (Pheptinh === 'tru') kq = so1 - so2;
+        if (Pheptinh === 'chia') kq = so1 / so2;
+        if (Pheptinh === 'chia du') kq = so1 % so2;
+        document.getElementById('ketqua').value = kq;
+
+    }
+</script>
+
+</html>
