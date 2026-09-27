@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+    <script>
+        function regex() {
+            const str = 'Hello hello HELLO';
+            const regex = (/[Hh] ello /g);
+            console.log(str.match(regex));
+        }
+        regex();
+
+        function regex1() {
+            const str = "12345";
+            const ketquachuoi1 = (/[135]/g);
+            console.log(str.match(regex));
+
+        }
+        regex1();
+
+        function regex2() {
+            const str = "programming";
+            const ketqua1 = bai1.replace(/[^aeiou]/g, "");
+            console.log(str.match(regex));
+
+        }
+        regex2()
+
+        function regex3() {
+            const str = 'nói "xin chào" và "tạm biệt"';
+            const ketqua2 = bai2.match(/[^ ]+/g);
+            console.log(str.match(regex3));
+        }
+    </script>
+
+</body>
